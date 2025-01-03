@@ -6,3 +6,5 @@ cap = cv2.VideoCapture(1)
 
 while True:
     success, img = cap.read()
+
+    cv2.imshow("image", img)
