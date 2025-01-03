@@ -13,4 +13,10 @@ while True:
 
     cv2.imshow("Image", img)
 
-    cv2.waitKey(1)
+    # Break the loop if 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("Exiting...")
+        break
+
+cap.release()
+cv2.destroyAllWindows()
