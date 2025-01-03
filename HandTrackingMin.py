@@ -4,8 +4,11 @@ import time
 
 cap = cv2.VideoCapture(0)
 
+mpHands = mp.solutions.hands
+
 while True:
     success, img = cap.read()
+
 
     if not success:
         print("Failed to capture frame. Check camera connection.")
