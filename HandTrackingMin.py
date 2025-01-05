@@ -12,6 +12,7 @@ while True:
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
 
+
     if not success:
         print("Failed to capture frame. Check camera connection.")
         break
