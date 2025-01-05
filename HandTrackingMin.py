@@ -9,17 +9,18 @@ hands = mpHands.Hands()
 
 while True:
     success, img = cap.read()
-    imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    results = hands.process(imgRGB)
-
 
     if not success:
         print("Failed to capture frame. Check camera connection.")
         break
 
+    # Process frame only if it is valid
+    imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    results = hands.process(imgRGB)
+
     cv2.imshow("Image", img)
 
-    # Break the loop if 'q' is pressed
+    # Break loop on 'q' key press
     if cv2.waitKey(1) & 0xFF == ord('q'):
         print("Exiting...")
         break
