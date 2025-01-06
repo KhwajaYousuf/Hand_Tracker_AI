@@ -20,7 +20,8 @@ while True:
     results = hands.process(imgRGB)
     # print(results.multi_hand_landmarks)
 
-    if results.multi_hand_landmarks;
+    if results.multi_hand_landmarks:
+        for handLms in results.multi_hand_landmarks:
 
 
 
