@@ -17,6 +17,7 @@ while True:
     # Process frame only if it is valid
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
+    print(results)
 
     cv2.imshow("Image", img)
 
