@@ -6,6 +6,7 @@ cap = cv2.VideoCapture(0)
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
+mpDraw = mp.solutions.drawing_utils
 
 while True:
     success, img = cap.read()
@@ -17,7 +18,9 @@ while True:
     # Process frame only if it is valid
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
-    print(results.multi_hand_landmarks)
+    # print(results.multi_hand_landmarks)
+
+
 
     cv2.imshow("Image", img)
 
